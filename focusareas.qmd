@@ -1,0 +1,52 @@
+---
+title: ""
+format: html
+---
+
+```{=html}
+<div class="focus-hero">
+  <div class="focus-hero-inner">
+    <h2 class="focus-hero-title">Focus Areas</h2>
+  </div>
+</div>
+
+<div class="focus-wrapper">
+  <div class="focus-section-head">
+    <h1>Focused Thematic Areas of Vasundhara Seva Samiti</h1>
+    <p>Vasundhara Seva Samiti works on key thematic areas to strengthen community systems and improve the quality of life of marginalized rural families.</p>
+  </div>
+
+  <div class="focus-nav" aria-label="Focus areas menu">
+    <a href="#basic-rights">Basic Rights</a>
+    <a href="#livelihood">Livelihood</a>
+    <a href="#disaster-management">Disaster Management</a>
+    <a href="#capacity-building">Capacity Building</a>
+  </div>
+
+  <div class="focus-grid">
+    <section class="focus-card" id="basic-rights">
+      <div class="focus-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+      <h3>Basic Rights</h3>
+      <p>Supporting communities to access rights and entitlements, with awareness, outreach, and collective action.</p>
+    </section>
+
+    <section class="focus-card" id="livelihood">
+      <div class="focus-icon"><i class="bi bi-tree-fill" aria-hidden="true"></i></div>
+      <h3>Livelihood</h3>
+      <p>Promoting sustainable livelihoods through skills, local planning, and connecting families with support schemes.</p>
+    </section>
+
+    <section class="focus-card" id="disaster-management">
+      <div class="focus-icon"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i></div>
+      <h3>Disaster Management</h3>
+      <p>Building preparedness, risk awareness, and community response capacity to reduce disaster impacts.</p>
+    </section>
+
+    <section class="focus-card" id="capacity-building">
+      <div class="focus-icon"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></div>
+      <h3>Capacity Building</h3>
+      <p>Strengthening community institutions and leaders through training, mentoring, and continuous support.</p>
+    </section>
+  </div>
+</div>
+```
