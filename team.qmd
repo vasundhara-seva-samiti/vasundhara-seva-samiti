@@ -2,16 +2,6 @@
 title: "Our Team"
 ---
 
-## Board
-
-The Board provides strategic direction, governance oversight, and policy guidance to ensure institutional integrity and long-term impact.
-
-Add board member details here:
-
-- Name - Role
-- Name - Role
-- Name - Role
-
 ## Team
 
 The team consists of field facilitators, thematic coordinators, and management staff working directly with village communities, community-based institutions, and local governance bodies.

@@ -1153,6 +1153,15 @@
   margin: 0 auto 30px; /* Center the divider */
 }
 
+/* Navbar Background Image */
+.navbar {
+  background-image: url("images/navbar-bg.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 4px solid #1a5c2a;
+}
+
 /* About dropdown menu styling */
 .navbar .dropdown-menu {
   min-width: 420px;
