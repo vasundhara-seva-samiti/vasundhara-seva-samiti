@@ -1,4 +1,5 @@
 /* css styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;700&family=Playfair+Display:wght@400;700;900&display=swap');
 
 #vssCarousel {
   width: 100%;
@@ -53,24 +54,36 @@
 }
 
 #vssCarousel .carousel-caption {
-  right: 6%;
-  left: 6%;
-  bottom: 8%;
-  text-align: right;
-  max-width: 800px;
-  margin-left: auto;
-  z-index: 10; /* Ensure text is above image */
+  right: auto;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  text-align: left;
+  max-width: 700px;
+  margin-left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 0;
 }
 
 #vssCarousel .carousel-caption h2 {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 3.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
   font-weight: 700;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
   opacity: 0;
   animation: none;
+  color: #fff;
+  /* Stroke and strong shadow effect */
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6);
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.8),
+    6px 6px 15px rgba(0, 0, 0, 0.9);
 }
 
 #vssCarousel .carousel-item.active .carousel-caption h2 {
@@ -78,25 +91,47 @@
 }
 
 #vssCarousel .carousel-caption p {
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
-  line-height: 1.5;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600; /* Increased weight */
+  line-height: 1.6;
   opacity: 0;
   transform: translate3d(0, 40px, 0);
   animation: none;
   will-change: opacity, transform;
+  color: #fff;
+  margin-bottom: 2rem;
+  max-width: 90%;
+  /* Strong shadow for readability */
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 10px rgba(0, 0, 0, 0.7);
 }
 
 #vssCarousel .carousel-item.active .carousel-caption p {
-  animation: vssFadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.9s forwards;
+  animation: vssFadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.8s forwards;
 }
 
 @media (max-width: 768px) {
   #vssCarousel .carousel-item {
     height: 62vh;
     min-height: 360px;
+  }
+
+  #vssCarousel .carousel-caption {
+    left: 5%;
+    max-width: 90%;
+    align-items: flex-start; /* Keep left alignment */
+  }
+
+  #vssCarousel .carousel-caption h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  #vssCarousel .carousel-caption p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -242,6 +277,37 @@
   border-bottom: 4px solid #1a5c2a;
   color: #fff;
   padding: 60px 0;
+}
+
+.mission-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-image: linear-gradient(90deg, rgba(12, 38, 90, 0.92), rgba(12, 38, 90, 0.55)), url("images/h1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 4px solid #1a5c2a;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.mission-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mission-hero-title {
+  font-size: 2.05rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .gallery-hero {
@@ -1467,3 +1533,189 @@
 }
 
 @import './responsive.css';
+.career-hero-v3 {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  min-height: 85vh; /* Bigger background - nearly full view */
+  /* Add linear gradient on top of the image */
+  background-image: linear-gradient(to bottom, rgba(30, 20, 60, 0.2), rgba(30, 20, 60, 0.05)), url("images/gpt.png");
+  background-size: contain; /* Do not crop - fit entire image */
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #f0f4f8; /* Fallback background color */
+  display: flex;
+  align-items: center; /* Centered vertically */
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.career-hero-overlay-container {
+  background: rgba(255, 255, 255, 0.95); /* Off-white semi-transparent */
+  backdrop-filter: blur(4px);
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Subtle shadow */
+  max-width: 600px;
+  margin-left: 10%; /* Slightly left of center */
+  width: 90%;
+  position: relative;
+  z-index: 10;
+  border-left: 5px solid #1a5c2a; /* Related to About style accent */
+}
+
+.career-hero-overlay-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+/* Heading Divider - styled like focus/about accent */
+.career-hero-divider {
+  width: 80px;
+  height: 4px;
+  background-color: #1a5c2a;
+  margin-bottom: 24px;
+}
+
+.career-hero-overlay-container p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #6f7a86;
+  margin-bottom: 16px;
+}
+
+.career-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #4e73f8, #3b5bdb);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(78, 115, 248, 0.3);
+}
+
+.career-hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(78, 115, 248, 0.4);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .career-hero-overlay-container {
+    margin: 0 auto;
+    padding: 30px;
+  }
+  .career-hero-overlay-container h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* =========================================
+   Typography Updates (Playfair Display & DM Sans)
+   Applied to Navbar, About, Focus, and Gallery
+   ========================================= */
+
+/* Navbar */
+.navbar .navbar-brand .navbar-title,
+.navbar .navbar-brand::after,
+.navbar .navbar-brand-logo::after {
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar .nav-link,
+.navbar .dropdown-item,
+.vss-topbar-link,
+.vss-topbar-donate {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* About Section */
+.about-hero-title,
+.mission-hero-title,
+.about-intro-text h1,
+.about-intro-text h2,
+.about-intro-text h3,
+.section-title,
+.vss-theme-overview h3,
+.vss-focus-band-inner h3,
+.col-md-6 h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.about-intro-text, 
+.about-intro-text p,
+.focus-subtitle-wrapper p,
+.about-principles-item p,
+.about-home p,
+.vss-focus-band-inner p,
+.col-md-6 p {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.about-principles-item h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Focus Areas Section */
+.focus-hero-title,
+.focus-intro-text h1,
+.focus-section-head h1,
+.vss-theme-overview-card h3,
+.vss-theme-head h3,
+.focus-card h3,
+.core-card h4,
+.area-title,
+.swaraj-camp-title {
+  font-family: 'Playfair Display', serif;
+}
+
+.focus-subtitle-wrapper p,
+.focus-section-head p,
+.vss-theme-overview-card p,
+.vss-theme-body p,
+.focus-card p,
+.core-card p,
+.area-desc,
+.vss-focus-intro,
+.focused-area-card {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Gallery Section */
+.gallery-hero-title {
+  font-family: 'Playfair Display', serif;
+}
+
+.gallery-caption h5,
+.lightbox-caption {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Gallery Extras */
+.vgx-overlay h3,
+.vgx-material-card h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.vgx-overlay p,
+.vgx-material-card a,
+.vgx-foot p,
+.vgx-header p,
+.vgx-materials-head p {
+  font-family: 'DM Sans', sans-serif;
+}
+
